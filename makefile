@@ -5,7 +5,8 @@
 NAME = EnderP
 ICON = icon.png
 DESCRIPTION = "a game using ender pearls for teleportation"
-COMPRESSED = NO
+COMPRESSED = YES
+ARCHIVED = YES
 
 CXXFLAGS = -Wall -Wextra -Oz
 

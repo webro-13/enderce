@@ -21,7 +21,7 @@ int main(void)
     gfx_FillRectangle(x, y += 2, 30, 30);
     }
 
-    if (kb_Data[7] & kb_Clear) {
+    if (kb_Data[7] & kb_Left) {
        
         running = false;
     }
