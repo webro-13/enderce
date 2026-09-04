@@ -1,4 +1,5 @@
 #include <graphx.h>
+#include <keypadc.h>
 #include <stdlib.h>
 
 bool key, prevkey;
