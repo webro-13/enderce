@@ -2,12 +2,6 @@
 #include <keypadc.h>
 #include <stdlib.h>
 
-bool key, prevkey;
-key = kb_Data[1] == kb_2nd;
-
-bool key2, prevkey2;
-key2 = kb_Data[1] == kb_clear;
-
 bool running = true;
 
 int x = 160;
@@ -21,18 +15,17 @@ int main(void)
         gfx_SetDrawBuffer();
     gfx_FillRectangle(x, y, 30, 30);
 
+    kb_Scan();
 
-    if (key && !prevkey) {
+    if (kb_Data[7] & kb_2nd) {
     gfx_FillRectangle(x, y += 2, 30, 30);
     }
-    prevkey = key;
 
-    if (key2 && !prevkey2) {
-        gfx_End();
+    if (kb_Data[7] & kb_Clear) {
+       
         running = false;
     }
-    prevkey2 = key2;
 }
-
+    gfx_End();
     return 0;
 }
