@@ -2,7 +2,7 @@
 # Makefile Options
 # ----------------------------
 
-NAME = "Ender Portal"
+NAME = EnderPortal
 ICON = icon.png
 DESCRIPTION = "a game using ender pearls for teleportation"
 COMPRESSED = NO
