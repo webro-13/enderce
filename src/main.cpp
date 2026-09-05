@@ -2,6 +2,7 @@
 #include <keypadc.h>
 #include <sys/timers.h>
 #include <ctime>
+#include "player.h"
 #include <stdlib.h>
 
 float playerX = 160;
