@@ -71,23 +71,23 @@ int main(void)
             velocityY += 1;
         }
 
-        if (playerX >= 300)
+        if (playerX >= 300 && !(kb_Data[7] & kb_Left))
         {
             playerX = 300;
             velocityX = 0;
         }
-        else if (playerX <= 0)
+        else if (playerX <= 0 && !(kb_Data[7] & kb_Right))
         {
             playerX = 0;
             velocityX = 0;
         }
 
-        if (playerY >= 220)
+        if (playerY >= 220 && !(kb_Data[7] & kb_Up))
         {
             playerY = 220;
             velocityY = 0;
         }
-        else if (playerY <= 0)
+        else if (playerY <= 0 && !(kb_Data[7] & kb_Down))
         {
             playerY = 0;
             velocityY = 0;
