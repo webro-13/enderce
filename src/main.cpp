@@ -36,6 +36,9 @@ int main(void)
             if (velocityX > -300.0f)
             {
                 velocityX -= 600.0f * dt;
+             if(velocityX < -300.0f){
+                    velocityX = -300.0f;
+                }
             }
         }
         else if (kb_Data[7] & kb_Right)
@@ -43,6 +46,9 @@ int main(void)
             if (velocityX < 300.0f)
             {
                 velocityX += 600.0f * dt;
+                if(velocityX > 300.0f){
+                    velocityX = 300.0f;
+                }
             }
         }
         else
@@ -50,10 +56,16 @@ int main(void)
             if (velocityX > 0)
             {
                 velocityX -= 600.0f * dt;
+                if(velocityX <= 0){
+                    velocityX = 0;
+                }
             }
             else if (velocityX < 0)
             {
                 velocityX += 600.0f * dt;
+                if(velocityX >= 0){
+                    velocityX = 0;
+                }
             }
         }
 
@@ -62,6 +74,9 @@ int main(void)
             if (velocityY > -300.0f)
             {
                 velocityY -= 600.0f * dt;
+                if(velocityY < -300.0f){
+                    velocityY = -300.0f;
+                }
             }
         }
         else if (kb_Data[7] & kb_Down)
@@ -69,15 +84,24 @@ int main(void)
             if (velocityY < 300.0f)
             {
                 velocityY += 600.0f * dt;
+                if(velocityY > 300.0f){
+                    velocityY = 300.0f;
+                }
             }
         }
         else if (velocityY > 0)
         {
             velocityY -= 600.0f * dt;
+            if(velocityY <= 0){
+                    velocityY = 0;
+                }
         }
         else if (velocityY < 0)
         {
             velocityY += 600.0f * dt;
+            if(velocityY >= 0){
+                    velocityY = 0;
+                }
         }
 
         playerX += velocityX * dt;
