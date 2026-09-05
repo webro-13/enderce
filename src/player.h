@@ -1,0 +1,2 @@
+
+void updatePlayer(float dt);
