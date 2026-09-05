@@ -25,51 +25,51 @@ int main(void)
 
         if (kb_Data[7] & kb_Left)
         {
-            if (velocityX > -5)
+            if (velocityX > -300.0f)
             {
-                velocityX -= 1;
+                velocityX -= 600.0f;
             }
         }
         else if (kb_Data[7] & kb_Right)
         {
-            if (velocityX < 5)
+            if (velocityX < 300.0f)
             {
-                velocityX += 1;
+                velocityX += 600.0f;
             }
         }
         else
         {
             if (velocityX > 0)
             {
-                velocityX -= 1;
+                velocityX -= 600.0f;
             }
             else if (velocityX < 0)
             {
-                velocityX += 1;
+                velocityX += 600.0f;
             }
         }
 
         if (kb_Data[7] & kb_Up)
         {
-            if (velocityY > -5)
+            if (velocityY > -300.0f)
             {
-                velocityY -= 1;
+                velocityY -= 600.0f;
             }
         }
         else if (kb_Data[7] & kb_Down)
         {
-            if (velocityY < 5)
+            if (velocityY < 600.0f)
             {
-                velocityY += 1;
+                velocityY += 300.0f;
             }
         }
         else if (velocityY > 0)
         {
-            velocityY -= 1;
+            velocityY -= 300.0f;
         }
         else if (velocityY < 0)
         {
-            velocityY += 1;
+            velocityY += 300.0f;
         }
         
         clock_t currentTime = clock();
