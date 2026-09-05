@@ -107,3 +107,8 @@ if (kb_Data[7] & kb_Left)
                 velocityY = 0;
         }
 }
+
+void drawPlayer(int color, int w, int h){
+    gfx_SetColor(color);
+    gfx_FillRectangle(playerX, playerY, w, h);
+}
