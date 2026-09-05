@@ -55,14 +55,14 @@ int main(void)
         {
             if (velocityX > 0)
             {
-                velocityX -= 1200.0f * dt;
+                velocityX -= 1800.0f * dt;
                 if(velocityX <= 0){
                     velocityX = 0;
                 }
             }
             else if (velocityX < 0)
             {
-                velocityX += 1200.0f * dt;
+                velocityX += 1800.0f * dt;
                 if(velocityX >= 0){
                     velocityX = 0;
                 }
@@ -91,14 +91,14 @@ int main(void)
         }
         else if (velocityY > 0)
         {
-            velocityY -= 1200.0f * dt;
+            velocityY -= 1800.0f * dt;
             if(velocityY <= 0){
                     velocityY = 0;
                 }
         }
         else if (velocityY < 0)
         {
-            velocityY += 1200.0f * dt;
+            velocityY += 1800.0f * dt;
             if(velocityY >= 0){
                     velocityY = 0;
                 }
