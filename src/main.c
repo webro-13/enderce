@@ -96,7 +96,7 @@ int main(void)
         playerX += velocityX;
         playerY += velocityY;
 
-        gfx_Fillscreen(0);
+        gfx_FillScreen(0);
         gfx_SetColor(255);
         gfx_FillRectangle(playerX, playerY, 30, 30);
 
