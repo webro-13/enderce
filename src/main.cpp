@@ -3,6 +3,7 @@
 #include <sys/timers.h>
 #include <ctime>
 #include "player.h"
+#include "main.h"
 #include <stdlib.h>
 
 float playerX = 160;
