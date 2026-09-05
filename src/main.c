@@ -1,6 +1,7 @@
 #include <graphx.h>
 #include <keypadc.h>
 #include <sys/timers.h>
+#include <ctime>
 #include <stdlib.h>
 
 int playerX = 160;
