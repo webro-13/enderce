@@ -4,10 +4,10 @@
 #include <ctime>
 #include <stdlib.h>
 
-int playerX = 160;
-int playerY = 120;
-int velocityX = 0;
-int velocityY = 0;
+float playerX = 160;
+float playerY = 120;
+float velocityX = 0;
+float velocityY = 0;
 
 /* Main function, called first */
 int main(void)
