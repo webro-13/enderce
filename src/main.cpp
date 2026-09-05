@@ -91,14 +91,14 @@ int main(void)
         }
         else if (velocityY > 0)
         {
-            velocityY -= 600.0f * dt;
+            velocityY = 0;
             if(velocityY <= 0){
                     velocityY = 0;
                 }
         }
         else if (velocityY < 0)
         {
-            velocityY += 600.0f * dt;
+            velocityY = 0;
             if(velocityY >= 0){
                     velocityY = 0;
                 }
