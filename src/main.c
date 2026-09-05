@@ -10,25 +10,29 @@ int y = 1;
 /* Main function, called first */
 int main(void)
 {
+    
+    gfx_Begin();
+    gfx_SetDrawBuffer();
+
+    kb_SetMode(MODE_3_CONTINUOUS);
+
+
     while (running) {
-        gfx_Begin();
-        gfx_SetDrawBuffer();
-        gfx_SetColor(0);
-gfx_FillRectangle(0, 0, 320, 240);
-        gfx_SetColor(255);
-        gfx_FillRectangle(x, y, 30, 30);
-
-    kb_Scan();
-
+        
     if (kb_Data[7] & kb_Right) {
-    gfx_SetColor(255);
-    gfx_FillRectangle(x, y += 2, 30, 30);
+        y += 2
     }
 
     if (kb_Data[7] & kb_Left) {
        
         running = false;
     }
+
+    gfx_Fillscreen(0);
+    gfx_SetColor(255);
+    gfx_FillRectangle(x, y, 30, 30);
+
+    gfx_SwapDraw();
 }
     gfx_End();
     return 0;
