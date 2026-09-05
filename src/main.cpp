@@ -23,29 +23,37 @@ int main(void)
     while (!(kb_Data[6] & kb_Clear))
     {
 
+    clock_t currentTime = clock();
+
+    clock_t elapsed = currentTime - previousTime;
+
+    float dt = static_cast<float>(elapsed) / CLOCKS_PER_SEC;
+
+    previousTime = currentTime;
+
         if (kb_Data[7] & kb_Left)
         {
             if (velocityX > -300.0f)
             {
-                velocityX -= 1;
+                velocityX -= 600.0f * dt;
             }
         }
         else if (kb_Data[7] & kb_Right)
         {
             if (velocityX < 300.0f)
             {
-                velocityX += 1;
+                velocityX += 600.0f * dt;
             }
         }
         else
         {
             if (velocityX > 0)
             {
-                velocityX -= 1;
+                velocityX -= 600.0f * dt;
             }
             else if (velocityX < 0)
             {
-                velocityX += 1;
+                velocityX += 600.0f * dt;
             }
         }
 
@@ -53,33 +61,24 @@ int main(void)
         {
             if (velocityY > -300.0f)
             {
-                velocityY -= 1;
+                velocityY -= 600.0f * dt;
             }
         }
         else if (kb_Data[7] & kb_Down)
         {
             if (velocityY < 300.0f)
             {
-                velocityY += 1;
+                velocityY += 600.0f * dt;
             }
         }
         else if (velocityY > 0)
         {
-            velocityY -= 1;
+            velocityY -= 600.0f * dt;
         }
         else if (velocityY < 0)
         {
-            velocityY += 1;
+            velocityY += 600.0f * dt;
         }
-        
-        clock_t currentTime = clock();
-
-    clock_t elapsed = currentTime - previousTime;
-
-    float dt = static_cast<float>(elapsed) / CLOCKS_PER_SEC;
-
-    previousTime = currentTime;
-    
 
         playerX += velocityX * dt;
         playerY += velocityY * dt;
