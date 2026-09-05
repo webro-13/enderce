@@ -17,6 +17,8 @@ int main(void)
 
     kb_SetMode(MODE_3_CONTINUOUS);
 
+    clock_t previousTime = clock();
+
     while (!(kb_Data[6] & kb_Clear))
     {
 
@@ -68,6 +70,18 @@ int main(void)
         {
             velocityY += 1;
         }
+        
+        clock_t currentTime = clock();
+
+    clock_t elapsed = currentTime - previousTime;
+
+    float dt = static_cast<float>(elapsed) / CLOCKS_PER_SEC;
+
+    previousTime = currentTime;
+    
+
+        playerX += velocityX * dt;
+        playerY += velocityY * dt;
 
         if (playerX > 300)
         {
@@ -94,15 +108,17 @@ int main(void)
             if (velocityY < 0)
                 velocityY = 0;
         }
-        playerX += velocityX;
-        playerY += velocityY;
+        
 
         gfx_FillScreen(0);
         gfx_SetColor(255);
         gfx_FillRectangle(playerX, playerY, 30, 30);
 
         gfx_SwapDraw();
-        delay(16);
+
+        
+
+
     }
     gfx_End();
     return 0;
