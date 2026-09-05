@@ -55,14 +55,14 @@ int main(void)
         {
             if (velocityX > 0)
             {
-                velocityX -= 600.0f * dt;
+                velocityX = 0;
                 if(velocityX <= 0){
                     velocityX = 0;
                 }
             }
             else if (velocityX < 0)
             {
-                velocityX += 600.0f * dt;
+                velocityX = 0;
                 if(velocityX >= 0){
                     velocityX = 0;
                 }
