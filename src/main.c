@@ -3,12 +3,10 @@
 #include <sys/timers.h>
 #include <stdlib.h>
 
-
 int playerX = 160;
 int playerY = 120;
 int velocityX = 0;
 int velocityY = 0;
-
 
 /* Main function, called first */
 int main(void)
@@ -71,28 +69,31 @@ int main(void)
             velocityY += 1;
         }
 
-        if (playerX >= 300 && !(kb_Data[7] & kb_Left))
+        if (playerX > 300)
         {
             playerX = 300;
-            velocityX = 0;
+            if (velocityX > 0)
+                velocityX = 0;
         }
-        else if (playerX <= 0 && !(kb_Data[7] & kb_Right))
+        else if (playerX < 0)
         {
             playerX = 0;
-            velocityX = 0;
+            if (velocityX < 0)
+                velocityX = 0;
         }
 
-        if (playerY >= 220 && !(kb_Data[7] & kb_Up))
+        if (playerY > 220)
         {
             playerY = 220;
-            velocityY = 0;
+            if (velocityY > 0)
+                velocityY = 0;
         }
-        else if (playerY <= 0 && !(kb_Data[7] & kb_Down))
+        else if (playerY < 0)
         {
             playerY = 0;
-            velocityY = 0;
+            if (velocityY < 0)
+                velocityY = 0;
         }
-
         playerX += velocityX;
         playerY += velocityY;
 
