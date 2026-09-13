@@ -9,7 +9,7 @@ if (kb_Data[7] & kb_Left)
         {
             if (velocityX > -300.0f)
             {
-                velocityX -= 600.0f * dt;
+                velocityX -= 1200.0f * dt;
              if(velocityX < -300.0f){
                     velocityX = -300.0f;
                 }
@@ -19,7 +19,7 @@ if (kb_Data[7] & kb_Left)
         {
             if (velocityX < 300.0f)
             {
-                velocityX += 600.0f * dt;
+                velocityX += 1200.0f * dt;
                 if(velocityX > 300.0f){
                     velocityX = 300.0f;
                 }
@@ -47,7 +47,7 @@ if (kb_Data[7] & kb_Left)
         {
             if (velocityY > -300.0f)
             {
-                velocityY -= 600.0f * dt;
+                velocityY -= 1200.0f * dt;
                 if(velocityY < -300.0f){
                     velocityY = -300.0f;
                 }
@@ -57,7 +57,7 @@ if (kb_Data[7] & kb_Left)
         {
             if (velocityY < 300.0f)
             {
-                velocityY += 600.0f * dt;
+                velocityY += 1200.0f * dt;
                 if(velocityY > 300.0f){
                     velocityY = 300.0f;
                 }

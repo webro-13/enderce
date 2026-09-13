@@ -10,6 +10,10 @@ float playerX = 160;
 float playerY = 120;
 float velocityX = 0;
 float velocityY = 0;
+float obstacleX = 0;
+float obstacleY = 0;
+float obstacleWidth = 0;
+float obstacleHeight = 0;
 
 /* Main function, called first */
 int main(void)
